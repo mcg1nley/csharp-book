@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemRotation : MonoBehaviour
 {
-    public int RotationSpeed = 100;
+    public int RotationSpeed = 500; //Set back to 100
     Transform ItemTransform;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class ItemRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ItemTransform.Rotate(RotationSpeed * Time.deltaTime, 0, 0);
-        
+        ItemTransform.Rotate(RotationSpeed * Time.deltaTime, RotationSpeed * Time.deltaTime, 0); // set to RotationSpeed * Time.deltaTime, 0, 0
+
     }
 }
